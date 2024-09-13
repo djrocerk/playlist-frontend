@@ -1,0 +1,23 @@
+<div class="song-selection-container">
+  <label class="song-label">Elige tu canción</label>
+  <ng-select
+    class="custom-select"
+    [items]="songs"
+    bindLabel="titulo"
+    bindValue="id"
+    placeholder="Selecciona una canción"
+    (change)="onSongSelect($event)">
+  </ng-select>
+  <button class="add-button" (click)="agregarCancion()">Agregar</button>
+</div>
+<div class="playlist-info">
+  <input id="playlistName" [(ngModel)]="playlistName" placeholder="Nombre de la lista" />
+
+  <input id="playlistDescription" [(ngModel)]="playlistDescription" placeholder="Descripción" />
+</div>
+<div class="playlist-cards">
+  <app-card-songs *ngFor="let song of selectedSongs" [song]="song"></app-card-songs>
+</div>
+<div class="playlist-actions">
+  <button class="save-button" (click)="guardarPlaylist()">Guardar Playlist</button>
+</div>

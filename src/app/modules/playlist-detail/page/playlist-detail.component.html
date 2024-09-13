@@ -1,0 +1,6 @@
+<div class="playlist-cards">
+  <div class="delete-button-container">
+    <button class="delete-button" (click)="eliminarPlaylist()">Eliminar Playlist</button>
+  </div>
+  <app-card-songs *ngFor="let song of selectedSongs" [song]="song"></app-card-songs>
+</div>

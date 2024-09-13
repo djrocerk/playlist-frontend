@@ -1,0 +1,175 @@
+.song-selection-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3%;
+  gap: 10px;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.flex-column {
+    flex-direction: column;
+  }
+}
+
+.song-label {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.custom-select {
+  width: 200px;
+}
+
+.add-button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.details-button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.playlist-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  position: relative;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: center;
+  align-items: stretch;
+}
+
+
+.playlist-actions {
+  display: flex;
+  margin-top: 25px;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.save-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+
+  &:hover {
+    background-color: #218838;
+  }
+}
+
+.playlist-info {
+  display: flex;
+  gap: 10px;
+  label {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  input {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+.modal-dialog.modal-lg {
+  max-width: 80%;
+}
+
+.modal-content {
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  border-bottom: 1px solid #dee2e6;
+  background-color: #007bff;
+  color: white;
+
+  .btn-close {
+    background: none;
+    border: none;
+    color: white;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.modal-footer {
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+
+  .btn {
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+
+    &:hover {
+      background-color: #5a6268;
+    }
+  }
+}
+
+// Estilos responsivos
+@media (max-width: 768px) {
+  .song-selection-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .custom-select, .add-button, .details-button, .save-button {
+    width: 100%;
+  }
+
+  .add-button, .details-button {
+    text-align: center;
+  }
+}

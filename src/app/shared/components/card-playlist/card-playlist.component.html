@@ -1,0 +1,19 @@
+<div class="card-container">
+  <mat-card *ngFor="let playlist of playlists" class="example-card">
+    <mat-card-header>
+      <mat-card-title class="card-title">{{ playlist.nombre }}</mat-card-title>
+    </mat-card-header>
+    <img src="assets/images/spotify-background.jpg" alt="Song Thumbnail">
+    <mat-card-content>
+      <h2 class="content-title">Detalles: </h2>
+      <p class="card-text">{{ playlist.descripcion }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-icon-button color="primary" class="custom-button">
+        <a mat-button color="primary" class="custom-button" routerLink="playlist-details/{{playlist.nombre}}">
+          Ver Detalles
+        </a>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
